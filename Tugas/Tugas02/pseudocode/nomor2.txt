@@ -1,0 +1,16 @@
+program Konversi
+kamus
+    angka : integer
+algoritma
+    input(angka)
+endprogram
+
+procedure Division(in a,b : integer, in/out result, remainder : integer)
+algoritma
+    result <- a div b 
+    remainder <- a mod b
+endprocedure
+
+function Num25tr(x : integer) -> string
+algoritma
+    

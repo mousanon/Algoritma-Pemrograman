@@ -1,0 +1,13 @@
+program BAYI
+kamus
+    x, y, z:  float
+    hasil:  float
+algortima
+    z <- 0
+    repeat 
+        input(x, y)
+        hasil <- (y-x)/z
+        z <- z + 1
+    until x == y
+    print(hasil)
+endprogram

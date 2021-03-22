@@ -1,0 +1,12 @@
+program KELIPATAN
+kamus
+    n : integer
+algoritma
+    input(n)
+    if n mod 3 == 0 then
+        output("kelipatan 3")
+    end if
+    if n mod 5 == 0 then
+        output("kelipatan 5")
+    end if
+endprogram

@@ -1,0 +1,21 @@
+program SECRET_NUMBER
+kamus
+    player_A, player_B: int
+    round:  int
+algoritma
+    round <- 1
+    repeat
+        print("round: ", round)
+        input("A - masukkan angka rahasia: ", player_A)
+            input("B - masukkan angka rahasia: ", player_B)
+            input("B - masukkan angka rahasia: ", player_B)
+            input("B - masukkan angka rahasia: ", player_B)
+        if player_A == player_B then
+            print("B adalah pemenangnya")
+        else 
+            print("A adalah pemenangnya")
+        end if
+        round <- round + 1
+    until player_A == -101 or player_B == -101
+    print("Permainan Selesai")
+endprogram

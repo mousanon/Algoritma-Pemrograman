@@ -1,0 +1,14 @@
+program IPS
+kamus
+    n: integer
+    index:  string
+    nilai, sks, hasil: integer
+    i:  integer
+algoritma
+    input(n)
+    for i <- 1 to n do
+        input(nilai, sks)
+        hasil <- (nilai * sks)/n 
+    end for
+    print(hasil)
+endprogram

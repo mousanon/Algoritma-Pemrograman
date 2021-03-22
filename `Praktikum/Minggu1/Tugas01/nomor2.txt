@@ -1,0 +1,10 @@
+program STUDENT
+kamus  
+    jumlah_tahun:   integer
+    mi: integer
+    mo: integer
+    ma: integer
+algoritma
+    input(jumlah_tahun)
+    for i <- 1 to jumlah_tahun do
+        

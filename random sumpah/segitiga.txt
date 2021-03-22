@@ -1,0 +1,12 @@
+program SEGITIGA
+kamus
+    m, n, o : integer
+algoritma
+    input(m, n, o)
+    if m == n and m == o and n == o then
+        print("Segitiga sama sisi")
+    else if m == n || m == o || n == o then
+        print("Segitiga sama kaki")
+    else 
+        print("Segitiga sembarang")
+endprogram

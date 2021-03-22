@@ -1,0 +1,16 @@
+Soal
+Anda adalah seorang ketua tim dalam kegiatan pramuka dan 
+ditugaskan untuk mengecek kesiapan tim berupa kelengkapan
+anggotanya yang berjumlah N orang. Kelengkapan yang dicek
+adalah topi, ikat pinggang, alat tulis, tali dan pisau pramuka
+Setelah selesai laporkan kepada pembina pramuka berupa 
+"Tim siap" atau "Tim tidak siap"
+
+Solusi
+Lakukan sebanyak Nx dan pemeriksaan perlu dilakukan
+    anggota diminta maju dan dicek kelengkapannya
+    jika anggota tidak lengkap maka
+        pemeriksaan dihentikan
+    jika anggota lengkap maka  
+        lanjutkan pemeriksaan
+Laporkan status kesiapan

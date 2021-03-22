@@ -1,0 +1,19 @@
+program EXAM
+kamus
+    nilai: integer
+    budget: integer
+algoritma
+    read(nilai)
+    input(nilai)
+    if nilai > 80 then
+        if nilai == 100 then
+            budget += 100000
+        else if nilai > 85 AND nilai < 99 then
+            budget += 50000
+        else if nilai <= 85 then
+            budget += 25000
+    else
+        budget += 0
+    end if
+    print(budget)
+endprogram

@@ -1,0 +1,14 @@
+program Segitiga
+kamus
+    alas, tinggi, luas : real
+algoritma
+    luas <- 0
+    input(alas, tinggi)
+    HitungLuas(alas, tinggi, luas)
+    print("Luas Segitiga:", luas)
+endprogram
+
+procedure HitungLuas(in alas, tinggi : real, in/out luas : real)
+algoritma
+    luas <- (alas*tinggi)/2
+endprocedure

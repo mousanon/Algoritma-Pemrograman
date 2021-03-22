@@ -1,0 +1,20 @@
+program Hitung
+kamus
+    i : integer
+    bilangan, rata : real
+algortima
+    input(bilangan)
+    i <- 0
+    rata <- 0
+    while bilangan > 0 do
+        i <- i + 1
+        hitungRataRata(bilangan, i, rata)
+        input(bilangan)
+    endwhile
+    print(rata)
+endprogram
+
+procedure hitungRataRata(in b : real, i : integer, in/out r : real)
+algortima
+    r <- b / real(b)
+endprocedure

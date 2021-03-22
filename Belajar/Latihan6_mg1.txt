@@ -1,0 +1,21 @@
+Soal
+Ada seorang pemuda yang membawa seekor kambing, seekor
+serigala dan satu pikulan rumput. Mereka berada ditepi
+sebuah pulau dan ingin menyebrang ke pulau seberang. Ditepi 
+pulau itu hanya ada sebuah perahu yang cukup untuk 2 penumpang
+Dengan catatan, bahwa kambing tidak boleh ditinggal beruda 
+dengan serigala tanpa adanya pemuda karena serigala akan
+memakan kambing, kemudian kambing tidak boleh ditinggalb
+bersama rumput. Kemudian, yang bisa menggunakan perahu
+hanyalah pemuda. Bagaimana agar mereka semua bisa menyebrang
+ke pulau sebrang?
+
+Solusi
+1.  pemuda menyebrang membawa kambing, serigala ditinggal
+    bersama rumput
+2.  pemuda kembali ke pulau asal
+3.  pemuda kembali kepulau tujuan membawa rumput
+4.  pemuda kembali ke pulau asal membawa kambing
+5.  pemuda menyebrang pulau tujuan membawa serigala
+6.  pemuda kembali ke pulau asal
+7. pemuda menyebrang ke pulau tujuan membawa kambing

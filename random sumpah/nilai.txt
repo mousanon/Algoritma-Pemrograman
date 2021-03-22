@@ -1,0 +1,6 @@
+program NILAI
+kamus
+
+algpritma
+
+endprogram

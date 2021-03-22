@@ -1,0 +1,17 @@
+program STUDENT
+kamus
+    n, iterasi:  integer
+    mi, mo, ma: integer
+    count:  integer
+algoritma
+    input(n)
+    iterasi <- 1
+    count <- iterasi
+    for iterasi to n do
+        input(mi, mo, ma)
+    end for
+    repeat
+        count <- count + 1
+    until mi < mo
+    print(count)
+endprogram

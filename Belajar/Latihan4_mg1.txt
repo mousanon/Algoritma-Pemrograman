@@ -1,0 +1,7 @@
+Lakukan sebanyak Nx:
+    ambil barang dan lihat harganya
+    jumlahkan harganya
+Apabila totalnya > 200.000:
+    hitung potongan harga = total x 15%
+    setelah dapat potongan = total - potongan harga
+Beritahu total yang harus dibayarkan

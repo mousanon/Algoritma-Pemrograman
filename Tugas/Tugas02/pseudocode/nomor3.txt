@@ -1,0 +1,22 @@
+program UsahaDoa
+kamus
+    usaha, jumlahDoa : integer
+    doaOrtu : boolean
+    nilai : char
+algoritma
+
+endprogram
+
+procedure BacaData(in/out usaha, jumlahDoa : integer, doaOrtu : boolean, nilai : char)
+algoritma
+    print("Banyaknya usaha? ")
+    input(usaha)
+    print("Banyaknya doa? ")
+    input(jumlahDoa)
+    print("Doa orang tua? ")
+    input(doaOrtu)
+    print("Nilai Algoritma? ")
+    innput(nilai)
+endprocedure
+
+procedure TabungUsahaDoa(in )
