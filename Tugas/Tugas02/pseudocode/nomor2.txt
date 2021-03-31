@@ -1,16 +1,39 @@
 program Konversi
 kamus
-    angka : integer
+    desimal : integer
 algoritma
-    input(angka)
+    input(desimal)
+    biner <- Des2Bin(desimal)
+    print(biner)
 endprogram
 
-procedure Division(in a,b : integer, in/out result, remainder : integer)
+procedure Division(in a, b : integer, in/out result, remainder : integer)
 algoritma
-    result <- a div b 
-    remainder <- a mod b
+    result <- a div B
+    remainder <- a mod b    
 endprocedure
 
 function Num25tr(x : integer) -> string
 algoritma
-    
+    if x == 0 then
+        return "0"
+    else if x == 1 then
+        return "1"
+    else 
+        return ""
+    endif
+endfunction
+
+function Des2Bin(desimal : integer) -> string
+kamus
+    hasil : string
+    rDiv, rMod : integer
+algoritma
+    hasil <- ""
+    while desimal > 0
+        Division(desimal, 2, rDiv, rMod)
+        desimal <- rDiv
+        hasil <- Num25tr(rMod) + hasil
+    endwhile
+    return hasil
+endfunction
