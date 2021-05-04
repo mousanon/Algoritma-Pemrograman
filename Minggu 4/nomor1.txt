@@ -1,0 +1,8 @@
+program AfterPandemic
+kamus
+    n, m : integer
+algoritma
+    input(n, m)
+    if m mod n == 0 then
+        
+endprogram

@@ -1,0 +1,14 @@
+program Sumasi
+kamus
+    a, b, x : integer
+algoritma
+    print("a,b = ")
+    input(a, b)
+    for a to b do
+        b <- a + 1
+        x = a + b
+        a <- a + 1
+        b <- a + 2
+    endfor
+    print("nilai x = ", x)
+endprogram

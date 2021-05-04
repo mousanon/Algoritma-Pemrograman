@@ -1,0 +1,30 @@
+program BangunRuang
+kamus
+	a, b, c : real
+	op : char
+algoritma
+	input(a, b, c, op)
+	input(op)
+	if op = "T" then
+		balok(a, b, c)
+	else if op = "O" then
+		tabung(a, c)
+	else if op = "P" then
+		prisma(a, b, c)
+	endif
+endprogram
+
+function balok(in a, b, c : real) -> real
+algoritma
+	return a * b * c
+endfunction
+
+function tabung(in a, c : real) -> real
+algoritma
+	return 3.14 * a * a * c
+endfunction
+
+function prisma(in a, b, c : real) -> real
+algoritma
+	return 0.5 * (a*b) * (b*c)
+endfunction

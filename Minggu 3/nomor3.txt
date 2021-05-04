@@ -1,0 +1,10 @@
+program Digit
+kamus
+    x, bilangan : integer
+algoritma
+    input(x)
+    while x > 0 do
+        bil = x mod 10
+        print(bil)
+        x = x div 10
+endprogram

@@ -1,60 +1,33 @@
 program UsahaDoa
 kamus
-    usaha, doa : integer
+    total, usaha, nDoa : integer
     doaOrtu : boolean
     nilai : char
-    jumlah, x : integer
-    hasil : string
 algoritma
-    BacaData(usaha, doa, doaOrtu, nilai)
-    TabungUsahaDoa(usaha, doa, jumlah)
-    x <- TabungDoaOrtu(doaOrtu, jumlah)
-    HasilNilaiAlpro(nilai, jumlah)
-    hasil <- HasilAkhir(jumlah)
+    BacaData(usaha, nDoa, doaOrtu, nilai)
+    TabungUsahaDoa(usaha, nDoa, total)
+    total <- TabungDoaOrtu(doaOrtu, total)
 endprogram
 
 procedure BacaData(in/out usaha, jumlahDoa : integer, doaOrtu : boolean, nilai : char)
 algoritma
-    print("Banyaknya usaha? ")
-    input(usaha)
-    print("Banyaknya doa? ")
-    input(jumlahDoa)
-    print("Doa orang tua? ")
-    input(doaOrtu)
-    print("Nilai Algoritma? ")
-    innput(nilai)
-endprocedure
+    print("Banyaknya usaha? "); input(usaha)
+    print("Banyaknya doa? "); input(jumlahDoa)
+    print("Doa orang tua? "); input(doaOrtu)
+    print("Nilai Algoritma? "); input(nilai)
+end procedure
 
-procedure TabungUsahaDoa(in usaha : integer, doa, integer, in/out total : integer)
-algoritma 
+procedure TabungUsahaDoa(in usaha : integer, doa : integer, in/out total : integer)
+algoritma
     total <- usaha + doa
 endprocedure
 
-function TabungDoaOrtu(in doa : boolean, in/out total : integer) -> integer
+function TabungDoaOrtu(doa : boolean, total : integer) -> integer
 algoritma
-    if doa = true then
+    if doa then
         return total * 2
-    endif
-endfunction
-
-procedure HasilNilaiAlpro(in nilai : char, in/out total : integer)
-algoritma
-    if nilai = 'A' then
-        total <- total - 150
-    else if nilai = 'B' then
-        total <- total - 130
-    else if nilai = 'C' then
-        total <- total - 100
-    else if nilai = 'D' && nilai = 'E' then
-        total <- total - 0
+    else if
+        return total
     endif
 endprocedure
 
-function HasilAkhir(poin : integer) -> string
-algoritma
-    if poin >= 130 then
-        return "Lulus langsung dapat kerja gaji 2 digit"
-    else if poin < 130 && poin >= 50 then
-        return "Lulus langsung dapat kerja"
-    else if poin < 50 && poin > 0 then
-        return "Jangan lelah berdoa dan berusaha, tidak ada yang sia-sia dari usaha dan doa"

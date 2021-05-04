@@ -1,0 +1,13 @@
+program BeratBadan
+kamus
+    N, i: integer
+    bb, rata: real
+algoritma
+    input(N)
+    while i <= N do
+        input(bb)
+        rata <- bb / real(N)
+        i <- i + 1
+    endwhile
+    print(rata)
+endprogram

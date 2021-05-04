@@ -1,0 +1,15 @@
+program Tanki
+kamus
+    t, v, e : integer
+algoritma
+    input(t)
+    v <- 0
+    while v < t do
+        input(e)
+        v <- e + v
+        if v < t then
+            print("false")
+        endif
+    endwhile
+    print(true)
+endprogram

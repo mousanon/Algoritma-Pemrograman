@@ -1,0 +1,8 @@
+program Kehadiran
+kamus
+    hKerja : string
+    jamKerja, a, b, x, y : integer
+algoritma
+    input(hKerja, a, b, x, y)
+    print()
+endprogram

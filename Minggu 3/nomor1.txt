@@ -1,0 +1,12 @@
+program telpon
+kamus
+    u, n, iterasi, u1 : integer
+algoritma
+    input(u, n)
+    iterasi <- 1
+    u1 <- 0
+    for iterasi to n do
+        u1 <- u1 + u1
+    endfor
+    print(u1)
+endprogram

@@ -10,7 +10,7 @@ algoritma
     kabisat <- Kabisat(tahun)
     angkaBulan <- Bulan2Angka(bulan)
     hari <- jumlahHari(angkabulan, tahun)
-
+    
 endprogram
 
 function Kabisat(tahun : integer) -> boolean
@@ -57,7 +57,7 @@ kamus
     totalHari : int
 algoritma 
     X <- Kabisat(tahun)
-    if bln = 2 then
+    if bln = 2 == 0then
         if x = true then
             totalHari = 29
         else
@@ -83,4 +83,5 @@ algoritma
     tgl2 <- tanggal + 2
     bln2 <- bulan
     thn2 <- tahun
+    print(tgl2, bln2, thn2)
 endprocedure

@@ -1,0 +1,17 @@
+progaram Bills
+kamus
+    uang, lembar, guna, i : integer
+    status : boolean
+algoritma
+    print("Nilai uang (Rp): ); input(uang)
+    print("Lembar Rp.10000 yang diberikan: "); input(lembar)
+    guna <- o
+    i <- 0
+    while guna < uang do
+        guna = guna + 1
+        i <- i + 1
+    endwhile
+    print("Lembar Rp.100000 yang digunakanL ", guna)
+    status <- n >= 1
+    print("Cukup? ", status)
+endprogram
