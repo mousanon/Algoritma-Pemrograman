@@ -1,0 +1,17 @@
+program Fibonacci
+kamus
+	angka, deret0, deret1, i : integer
+algoritma
+	input(angka)
+	deret0 <- 0
+	deret1 <- 1
+	print(deret0, " ", deret1)
+	i <- 2
+	while i <= angka do
+		deretn <- deret + deret1
+		print(deretn, " ")
+		deret0 <- deret1
+		deret1 <- deretn
+		i <- i + 1
+	endwhile
+endprogram

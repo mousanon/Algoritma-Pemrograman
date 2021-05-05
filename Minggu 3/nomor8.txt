@@ -1,0 +1,16 @@
+program Bayi
+kamus
+	lk_1, lk_2, total : real
+	i : integer
+algoritma
+	input(lk_1, lk_2)
+	total <- 0
+	i <- 1
+	while lk_1 != lk_2 do
+		selisih = lk_2 - lk_1
+		total <- total + selisih
+		lk_1 <- lk_2
+		input lk_2
+	endwhile
+	print(total / iterasi)
+endprogram

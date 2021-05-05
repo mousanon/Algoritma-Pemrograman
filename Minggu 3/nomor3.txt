@@ -7,4 +7,5 @@ algoritma
         bil = x mod 10
         print(bil)
         x = x div 10
+    endwhile
 endprogram

@@ -1,13 +1,15 @@
 program BeratBadan
 kamus
-    N, i: integer
-    bb, rata: real
+	N, i : integer
+	bb, totalBb : real
 algoritma
-    input(N)
-    while i <= N do
-        input(bb)
-        rata <- bb / real(N)
-        i <- i + 1
-    endwhile
-    print(rata)
+	input(N)
+	i <- 1
+	totalBb <- 0
+	while i <= N do
+		input(bb)
+		totalBb <- totalBB + bb
+		i <- i + 1
+	endwhile
+	print(totalBb / N, "kg")
 endprogram

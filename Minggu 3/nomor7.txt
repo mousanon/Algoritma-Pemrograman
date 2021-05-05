@@ -1,0 +1,12 @@
+program FaktorBilangan
+kamus
+	angka, d: integer
+	s : boolean
+algoritma
+	input(angka)
+	d <- 1
+	while d <= angka do
+		s <- angka % d == 0
+		print(d, " ", s)
+	endwhile
+endprogram

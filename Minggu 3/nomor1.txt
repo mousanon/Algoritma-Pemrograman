@@ -1,12 +1,13 @@
-program telpon
+### TELEPON ###
+program Telepon
 kamus
-    u, n, iterasi, u1 : integer
+	jumCicilan, jumBulan, i, total : integer
 algoritma
-    input(u, n)
-    iterasi <- 1
-    u1 <- 0
-    for iterasi to n do
-        u1 <- u1 + u1
-    endfor
-    print(u1)
+	input(jumCicilan, jumBulan)
+	i <- 1
+	total <- 0
+	while i <= jumBulan do
+		total <- total + jumCicilan
+		i <- i + 1
+	endwhile
 endprogram

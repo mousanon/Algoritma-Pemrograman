@@ -1,0 +1,18 @@
+program Konsekutif
+kamus
+	angka : integer
+	status : boolean
+algoritma
+	status = true
+	input(angka)
+	nilai2 <- bilangan % 10
+	nilai1 <- nilai2
+	bilangan <- bilangan / 10
+	while bilangan > 0 and status do
+		nilai2 <- bilangan % 10
+		status <- (nilai1 - nilai2) == 1 or (nilai2 - nilai1) == 1
+		nila11 <- nilai2
+		bilangan <- bilangan / 10
+	endwhile
+	print(status)
+endprogram

@@ -1,14 +1,14 @@
 program Pramuka
 kamus
-    N : integer
-    topi, i_pingg, a_tulis, tali, pisau : boolean
+	N, i : integer
+	status : boolean
 algoritma
-    input(N)
-    i <- 1
-    for i to N do
-        input(topi, i_pingg, a_tulis, tali, pisau)
-        if !topi || !i_pingg, || !a_tulis || !tali || !pisau
-            
-    endfor
-    print(i)
+	input(N)
+	i <- 1
+	status <- true
+	while i <= N and status do
+		input(k1, k2, k3, k4, k5)
+		status <- k1 and k2 and k3 and k4 and k5
+		i <- i + 1
+	endwhile
 endprogram
