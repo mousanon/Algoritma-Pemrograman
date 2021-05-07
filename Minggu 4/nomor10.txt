@@ -1,0 +1,17 @@
+program Pola
+kamus
+	n : integer
+algoritma
+	input(n)
+	for i <- 0 to n do
+		for j <- 0 to n do
+			if i == 0 or i == n - 1 or i == n/2 then
+				print("*")
+			else if j == 0 or j == n - 1 or j == n/2 then
+				print("*")
+			else
+				print("*")
+			endif
+		endfor
+	endfor
+endprogram

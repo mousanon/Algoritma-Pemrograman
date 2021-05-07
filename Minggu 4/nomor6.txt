@@ -1,0 +1,34 @@
+program SkyBison
+kamus
+	p, dewasa, kecil: integer
+algoritma
+	input(p)
+	if p < 15 then
+		dewasa <- p div 5
+		if p % 5 != 0 then
+			dewasa <- dewasa + 1
+		endif
+	else
+		dewasa <- 3
+		sisa <- p - 15
+		if sisa < 10 then
+			kecil <- sisa div 2
+			if sisa % 2 != 0 then
+				kecil <- kecil + 1
+			endif
+			sisa <- 0
+		else
+			kecil <- 5
+			sisa <- sisa - 10
+		endif
+	endif
+	if dewasa != 0 then
+		print("Dewasa ", dewasa)
+	endif
+	if kecil != 0 then
+		print(", kecil ", kecil)
+	endif
+	if sisa != 0 then
+		print(", dan ", sisa, " tak berangkat")
+	endif
+endprogram

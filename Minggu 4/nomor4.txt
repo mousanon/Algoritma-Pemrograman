@@ -1,0 +1,32 @@
+program Nilai
+kamus
+	uts, uas, kuis, praktikum : real
+algoritma
+	print("Nilai UTS: ")
+	input(uts)
+	print("Nilai UAS: ")
+	input(uas)
+	print("Nilai Kuis: ")
+	input(kuis)
+	print("Nilai Praktikum: ")
+	input(praktikum)
+
+	if (uts >= 0 and uts <= 100) and (uas >= 0 and uas <= 100) and (kuis >= 0 and kuis <= 100) and (praktikum >= 0 and praktikum <= 100) then
+		nilai = (0.35 * uts) + (0.35 * uas) + (0.20 * kuis) + (0.10 * praktikum)
+		if nilai > 85 then
+			grade <- 'A'
+		else if nilai >70 and nilai <= 85 than
+			grade <- 'B'
+		else if nilai > 50 and nilai <= 70 then
+			grade <- 'C'
+		else if nilai > 40 and nilai <= 50 then
+			grade <- 'D'
+		else if nilai > 0 and nilai <= 40 then
+			grade <- 'E'
+		endif
+		print("Nilai akhir: ", nilai)
+		print("Indeks mutu: ", grade)
+	else 
+		print("Nilai tidak valid")
+	endif
+endprogram

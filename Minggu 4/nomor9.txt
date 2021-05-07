@@ -1,0 +1,15 @@
+progaram PolaBIntang
+kamus
+	n : integer
+algoritma
+	input(n)
+	for i <- 0 to n do
+		for j <- 0 to n do
+			if i == j or j == n - i - 1 
+				print("*")
+			else
+				print(" ")
+			endif
+		endfor
+	endfor
+endprogram

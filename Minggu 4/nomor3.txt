@@ -1,0 +1,13 @@
+program Segitiga
+kamus
+	a, b, c : integer
+algoritma
+	input(a, b, c)
+	if a == b and b == c then
+		print("Segitiga sama sisi")
+	else if a == b or b == c or a == c then
+		print("Segitiga sama kaki")
+	else
+		print("Segitiga Sembarang")
+	endif
+endprogram

@@ -1,0 +1,22 @@
+program Perpustakaan
+kamus
+	i, p_kmrn, turun, p_skrg : integer
+algoritma
+	i <- 0
+	p_kmrn <- 0
+	turun <- 0
+	print("Hari ke-", i, ": ")
+	input(p_skrg)
+	while p_skrg >= 0 do
+		if p_skrg > p_kmrn then
+			print("Status: naik")
+		else if p_skrg < p_kmrn then
+			print("Status: turun")
+			turun <- turun + 1
+		endif
+		i <- i + 1
+		p_kmrn <- p_skrg
+		print("Hari ke-", i, ": ")
+		input(p_skrg)
+	endwhile
+endprogram

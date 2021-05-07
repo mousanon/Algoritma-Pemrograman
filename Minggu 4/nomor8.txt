@@ -1,0 +1,11 @@
+program Koin
+kamus
+	uang, seratus, limaratus, seribu, duaribu : integer
+algoritma
+	input(uang)
+	while (uang == 100) or (uang == 500) or (uang == 1000) or (uang == 2000) do
+		if uang == 100 then
+			seratus <- seratus + 1
+		endif
+	endwhile
+endprogram

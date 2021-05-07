@@ -1,0 +1,12 @@
+program Kelipatan
+kamus
+	N : integer
+algoritma
+	input(N)
+	if N % 3 == 0 then
+		print("Kelipatan 3")
+	endif
+	if N % 5 == 0 then
+		print("Kelipatan 5")
+	endif
+endprogram

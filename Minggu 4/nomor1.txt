@@ -1,8 +1,12 @@
 program AfterPandemic
 kamus
-    n, m : integer
-algoritma
-    input(n, m)
-    if m mod n == 0 then
-        
+	jumlahMhs, KapasitasBus : integer
+algortima
+	input(jumlahMhs, kapasitasBus)
+	jumlahBus = jumlahMhs div kapasitasBus
+	if jumlahMhs mod kapasistasBus == 0 then
+		print(jumlahBus, "bus")
+	else
+		print(jumlahBus + 1, "bus")
+	endif
 endprogram
