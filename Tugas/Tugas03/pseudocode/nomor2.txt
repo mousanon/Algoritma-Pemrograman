@@ -1,0 +1,111 @@
+{a. subprogram utk menghitung panjang suatu string/teks (banyaknya karakter/huruf)}
+function panjang(s : string) -> integer
+{diberikan suatu string untuk mengembalikan panjangnya suatu string, function ini TERDEFINISI, TINGGAL DIGUANAKAN SAJA}
+	return lenght(s)
+endfunction
+
+
+{b. subprogram utk mengisi array dengan daftar kata dari teks}
+procedure isiArray(in s : string, in/out daftar : tabStr, k : integer)
+{I.S terdefinisi suatu teks
+ F.S sejumlah k kata pada teks dipindahkan ke dalam array}
+kamus
+	i, j : integer
+	str : string
+algoritma
+	i <- 0
+	j <- panjang(s)
+	while i < j do
+		str <- string(s[i])
+		if str != "_" then
+			daftar[k] <- str
+		else
+			k <- k + 1
+		endif
+	endwhile
+endprocedure
+
+{c. subprogram untuk mencari indeks pertama kata w pada suatu kata}
+function idxKata(kata, w teks) -> integer
+{mengembalikan index pertama dari string kedua}
+kamus
+	idx, iterasi : integer
+algoritma
+	iterasi <- 0
+	dicari <- string(w[0])
+	ketemu <- string(kata[i])
+	while i < panjang(kata) do
+		if dicari == ketemu
+			idx <- i
+		else
+			idx <- -1
+		endif
+		i <- i + 1
+	endwhile
+	return idx
+endfunction
+
+{d. subprogram untuk mencari posisi kata pada daftar kata}
+procedure cariPosisi(in daftar : tabStr, n : integer, w : string, in/out posisi, idx : integer)
+{I.S terdefinisi suatu array yang berisi n buah string dan string w 
+ F.S posisi berisi pada kata keberapa w ditemukan, dan idx dan berisi indeks pertama string w pada kata yang ditemukan}
+kamus
+	i, j : integer
+algoritma
+	idx <- -1
+	j <- 0
+	pjgDaftar <- panjang(daftar[i])
+	indeksKata <- idxKata(string[i][j])
+	while i <= n do
+		while j < pjgDaftar do
+			if indeksKata != -1 then
+				idx <- j
+				posisi <- i + 1
+			endif
+			j <- j + 1
+		endwhile
+		i <- i + 1
+	endwhile
+	if idx != -1 then
+		print(posisi, idx)
+	else
+		print(-1)
+	endif
+endprocedure
+
+{e. program utama}
+program kalimat
+kamus
+	type tabStr : array[0..99] of string
+	t : tabStr
+	teks, w : string
+	i, posisi, idx : integer
+	...
+algoritma
+	input(teks, w)
+	isiArray(teks, t, i)
+	cariPosisi(t, i, w, posisi, idx)
+endprogram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input : {teks 's'
+        kata 'w'
+        setiap kata 's' dipisah dengan '_'
+}
+output : { dua bilangan
+        bilangan ke-1 kata keberapa kata 'w' ditemukan
+        bilangan ke-2 index pertama ditemukannya kata 'w'
+
+}

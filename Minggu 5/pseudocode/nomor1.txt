@@ -1,0 +1,11 @@
+program Konversi Waktu
+kamus
+	j, m, d : integer
+algoritma
+	input(j, m, d)
+	print("Hasil Konversi: ", Konversi(j, m, d))
+endprogram
+
+function Konversi(jam, menit, detik : int) -> integer
+	return (jam * 3600) + (menit * 60) + detik
+endfunction

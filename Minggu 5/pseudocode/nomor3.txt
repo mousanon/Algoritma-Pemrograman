@@ -1,0 +1,20 @@
+program Diskon
+kamus
+	belanja : integer
+	member : boolean
+algoritma
+	input(belanja, member)
+	member <- true
+	total <- belanja - discount(belanja, member)
+	print("Total bayar: ", total)
+endprogram
+
+function Discount(beli, status) -> integer
+	if beli > 100000 and status then
+		return beli * 0.1
+	else if beli > 100000 and !member then
+		return beli * 0.05
+	else 
+		return 0
+	endif
+endfunction

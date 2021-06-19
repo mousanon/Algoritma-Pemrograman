@@ -1,0 +1,74 @@
+{a. deklarasi type}
+	type tag <
+		topik : string,
+		banyak : integer >
+	type tabTopic : array[0..99] of string
+	type tabTag : array[0.99] of tag
+
+{b. subprogram utk mengecek keberadaan topik pada array bertipe tabTag}
+function cekPosisi(in/out dataTag : tabTag, n1 : integer, dataTopic : tabTopik, n2 : integer) -> boolean, integer
+kamus
+	i : integer
+algoritma
+	i <- 0
+	while i < n1 do 
+		if dataTag[i].topik == topik then
+			return true, i
+		endif
+		i <- i + 1
+	endwhile
+	return false
+endfunction
+
+{c. subprogram utk mengisi array bertipe tabTag yang berisi topik dan jumlah kemunculannya, yg berasal dari array bertipe tabTag}
+procedure isiArray(in/out dataTag : tabTag, n1 : integer, dataTopic : tabTopik, n2 : integer)
+kamus
+	cek : boolean
+	letak, i : integer
+algoritma
+	i <- 0 
+	cekKeberadaan <- cekPosisi(dataTag, n1, dataTopic, n2)
+	while i < n2 do
+		cek, letak <- cekKeberadaan
+		if cek == true then
+			dataTag[letak].banyak <- dataTag[letak].banyak + 1
+		else
+			dataTag[letak].topik = dataTopic[i]
+			dataTag[letak].banyak <- dataTag[letak].banyak + 1
+			n1 <- n1 + 1
+		endif
+	endwhile
+endprocedure
+
+{d. subprogram utk mencari trending topic}
+function cariTrending(dataTag : tabTag, n1 : integer) -> string
+kamus
+	maks : integer
+	iterasi : integer
+algoritma
+	while iterasi < n1 do
+		if dataTag[iterasi].banyak > dataTag[maks].banyak then
+			max <- i
+		endif
+		iterasi <- iterasi + 1
+	endwhile
+	return dataTag[maks].topik
+endfunction
+
+{program utama}
+program trending
+kamus
+	topik : string
+	daftarTab : tabTopic
+	daftarTag : tabTag
+	n1, n2: integer
+algoritma
+	n2 <- 0
+	input(topik)
+	repeat 
+		daftarTab[n2] <- topik
+		input(topik)
+	until(topik != null)
+	isiArray(daftarTag, n1, taftarTab, n2)
+	print(cariTrending(daftartag, n1))
+endprogram

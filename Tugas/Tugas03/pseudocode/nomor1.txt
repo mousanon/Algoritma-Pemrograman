@@ -1,0 +1,110 @@
+{a. subprogram utk pencarian lagu dengan judul dan penyanyi tertentu pada playlist.}
+fucntion cariLagu(T : playlist, n : integer) -> integer
+{mencari judul lagu yang sama. jika ada judul yang sama maka judul dengan index tertinggi dihapus}
+kamus
+	i, k: integer
+	sama : string
+algoritma
+	i <- 0
+	k <- 0
+	sama <- T[k].judul
+	for i to n do
+		while i < n do 
+			if sama == T[k] then
+				if i == k then
+					break
+				else
+					hapus <- remove T[k]
+				endif		
+			endif
+		endwhile
+		k <- k + 1
+	endfor
+	return hapus
+endfunction
+
+{b. subprogram utk pengisian playlist pada masukan yang diberikan.}
+procedure buatPlaylist(in/out T : playlist, n : integer)
+{I.S data lagy telah siap pada piranti masukan
+ F.S array T berisi sejumlah n data lagu yang berasal dari masukan}
+kamus
+	m, d : integer
+	j, p : string
+algoritma
+	while n <= NMAX do 
+		input(j, p, m, d)
+		while j != "#" and p != "#"
+			T[i].judul <- j
+			T[i].penyanyi <- p 
+			T[i].menit <- m
+			T[i].detik <- d
+		endwhile
+		n <- n + 1
+	endwhile
+endprocedure
+
+{c. subprogram utk mencari lagu dengan durasi terlama.}
+function palingLama(T : playlist, n : integer) -> integer
+{diterima array T berisi durasi lagu untuk mengembalikan nilai maksimum}
+kamus
+	idx, max : integer
+algoritma
+	max <- T[0].menit
+	idx <- 1
+	while idx < n do
+		if max < T[idx].menit then
+			max <- T[idx]
+		endif
+		idx <- idx + 1
+	endwhile
+	return idx
+endfunction
+
+
+{d. subprogram utk menampilkan isi playlist dengan penjelasan pada keluaran yang diberikan}
+procedure cetakPlaylist(T : playlist, n : integer)
+{I.S terdefinisi array T yang berisi n lagu
+ F.S menampilkan daftar lagu dari array T ke piranti keluaran. lagu dengan durasi terlama diberi tanda * pada judul}
+kamus
+	k : integer
+algoritma
+	k <- 0
+	buatPlaylist(list, n)
+	terlama <- palingLama(list, n)
+	for k < n do
+		if k == pencarian then
+			print("* ", T[k].judul, T[k].menit, " menit ", T[k].detik, " detik")
+		else if k == pencarian
+			pencarian <- cariLagu(list,n)
+		else
+			print(T[k].judul)
+		endif
+	endfor
+endprocedure
+
+
+
+{e. kamus dari program utama}
+program Musik
+kamus
+	constant NMAX : integer = 1000
+	{deklarasi tipe lagu, waktu dan playlist}
+	type lagu <
+		judul, penyanyi : string >
+	type waktu <
+		menit, detik : integer >
+	type playlist <
+		tembang : lagu
+		durasi : waktu >
+	type playlist : array [0..NMAX] of playlist
+	list : playlist
+	n : integer
+
+algoritma
+	buatPlaylist(list,n)
+	cetakPlaylist(list,n)
+endprogram
+
+
+
+

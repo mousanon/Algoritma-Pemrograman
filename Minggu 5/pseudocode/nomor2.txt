@@ -1,0 +1,19 @@
+program is_triangle
+kamus
+	a, b, c : integer
+algoritma
+	input(a, b, c)
+	if segitiga(a, b, c) tjen
+		print("Segitiga")
+	else
+		print("Bukan segitiga")
+	endif
+endprogram
+
+function segitiga(s1, s2, s3 : integer) -> boolean
+	if (s1 + s2 > s3) and (s1 + s3 > s2) and (s2 + s3 > s1)
+		return true
+	else 
+		return false
+	endif
+endfunction
